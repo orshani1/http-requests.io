@@ -1,0 +1,44 @@
+<div *ngIf="!isActive">
+    <p class="waiting">Waiting for the data .......</p>
+    <div class="anim">
+
+    </div>
+    <div class="inside">
+
+    </div>
+</div>
+
+<div class="container" *ngIf="isActive" >
+    <div class="row">
+        <div class="col-8 offset-3">
+
+            <h1>
+                Details for user : {{user.name.firstname}}&nbsp;{{user.name.lastname}}
+            </h1>
+
+
+        </div>
+        <div class="my-card offset-5">
+            <div class="content">
+            <div class="my-title">
+                <p>
+                    Details For User _No{{id}}
+                </p>
+            </div>
+            <div class="my-body">
+                <p>Full-Name:&nbsp;{{user.name.firstname}}&nbsp;{{user.name.lastname}}</p>
+               <p>UserName:&nbsp;{{user.username}}</p>
+                <p>Password:&nbsp;{{user.password}}</p>
+                <p>Email:&nbsp;{{user.email}}</p>
+                <p>Phone:&nbsp;{{user.phone}}</p>
+                <p>City:&nbsp;{{user.address.city}}</p>
+                <p>Street:&nbsp;{{user.address.street}},&nbsp;{{user.address.number}}</p>
+                <p>ZipCode:&nbsp;{{user.address.zipcode}}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="container">
+    <a class="button" routerLink="/table"><i class="bi bi-box-arrow-in-right"></i>&nbsp;Go Back</a>
+</div>
